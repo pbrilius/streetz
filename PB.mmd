@@ -1,0 +1,63 @@
+graph TD
+    Core[("💎 PB Progress Engine<br/>(Verslo Branduolys)")]
+
+    classDef offense fill:#00d4ff,stroke:#005f73,stroke-width:2px,color:black;
+    classDef defense fill:#e5e5e5,stroke:#333,stroke-width:2px,color:black;
+    classDef mandate fill:#fff,stroke:#333,stroke-dasharray: 5 5;
+
+    style Core fill:#2a9d8f,stroke:#264653,stroke-width:4px,color:white
+
+    subgraph STS_ZONE ["⚡ OFENSYVA (STS)"]
+        direction TB
+        M_IVE("📜 Mandatas:<br/>IVE-MEDIA-PROC-2025")
+
+        subgraph TECH_OFF ["Technologinis Stack'as"]
+            OS1["🐧 Kubuntu STS (Wayland)"]
+            FW1["⚛️ SvelteKit / Qt QML"]
+            Sec1["🛡️ AppArmor / Hibridinis"]
+        end
+
+        subgraph VISUAL_OFF ["Estetika"]
+            V1["🌸 Visual Core:<br/>K-Pop / Anime (Rei)"]
+        end
+
+        subgraph TEAM_OFF ["Pilotai"]
+            P1(Povilas Brilius)
+            P2(Nerijus Rupšys)
+        end
+
+        M_IVE --> TECH_OFF
+        M_IVE --> VISUAL_OFF
+        M_IVE --> TEAM_OFF
+    end
+
+    subgraph LTS_ZONE ["🛡️ GYNYBA (LTS)"]
+        direction TB
+        M_LIZ("📜 Mandatas:<br/>LIZ-OFFICE-MGMT-2025")
+
+        subgraph TECH_DEF ["Technologinis Stack'as"]
+            OS2["🏢 RHEL/CentOS (X11)"]
+            FW2["🐘 Legacy MVP / Qt Widgets"]
+            Sec2["🔒 SELINUX (Griežtas)"]
+        end
+
+        subgraph VISUAL_DEF ["Estetika"]
+            V2["👔 Visual Core:<br/>Legacy Corporate"]
+        end
+
+        subgraph TEAM_DEF ["Saugotojai"]
+            D1(Oliver SellerX)
+            D2(Henrik AcquireY)
+            D3(Juozas Rupšys)
+        end
+
+        M_LIZ --> TECH_DEF
+        M_LIZ --> VISUAL_DEF
+        M_LIZ --> TEAM_DEF
+    end
+
+    Core ==> M_IVE
+    Core ==> M_LIZ
+
+    class M_IVE,OS1,FW1,Sec1,V1,P1,P2 offense;
+    class M_LIZ,OS2,FW2,Sec2,V2,D1,D2,D3 defense;
